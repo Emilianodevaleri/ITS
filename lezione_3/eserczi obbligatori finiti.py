@@ -215,3 +215,71 @@ for x in numbers1_9:
         
     else:
         print(f"{x}th")
+
+#6-1
+
+person:dict = {"nome":"Erik", "cognome":"Wilson", "età":20, "città":"Liverpool"}
+
+for key, value in person.items():
+    print(value)
+
+#6-2
+
+favorite_numbers:dict = {"Erik":8, "Mark":12, "Marie":23, "James":47, "Ilary":40}
+
+for key, value in favorite_numbers.items():
+    print(f"{key}:{value}")
+
+#6-3
+
+glossary:dict = {"append":"Add an item to the end of the list.", "extend":"Extend the list by appending all the items from the iterable.", "insert":"Insert an item at a given position.", "remove":"Remove the first item from the list whose value is equal to x.", "pop":"Remove the item at the given position in the list, and return it."}
+
+for key, value in glossary.items():
+    print(f"{key}:\n{value}")
+
+#6-7
+
+people:dict = {"Erik":{"name":"Erik", "surname":"Wilson", "age":20, "city":"Liverpool"}, "Mark":{"name":"Mark", "surname":"Jonhson","age":24, "city":"Cardiff"}, "Marie":{"name":"Marie", "surname":"Gibbs", "age":18, "city":"Manchester"}}
+
+for key, value in people.items():
+    print(f"{key}:\n{value}")
+
+#6-8
+
+dog:dict = {"name":"Jake", "species":"dog", "owner":"Erik"}
+cat:dict = {"name":"Snow", "species":"cat", "owner":"Mark"}
+parrot:dict = {"name":"Bluey", "species":"parrot", "owner":"Marie"}
+
+pets:list = [dog, cat, parrot]
+
+for i in pets:
+    print(i)
+
+#6-9
+
+favorite_places:dict = {"Erik":["Rome", "Florence", "Milan"], "Mark":["Manchester", "London", "Liverpool"], "Marie":["Miami", "New York", "Los Angeles"]}
+
+for key, value in favorite_places.items():
+    print(f"{key}:\n{value}")
+
+#6-10
+
+favorite_numbers:dict = {"Erik":8, "Mark":[12, 65], "Marie":23, "James":[47, 90], "Ilary":40}
+
+for key, value in favorite_numbers.items():
+    print(f"{key}:{value}")
+
+#6-11
+
+cities:dict = {"Rome":{"country":"Italy", "population":"2000000", "fact":"a"}, "Milan":{"country":"Italy", "population":"1000000", "fact":"b"}, "Berlin":{"country":"Germany", "population":"1500000", "fact":"c"}}
+
+for key, value in cities.items():
+    print(f"{key}:\n{value}")
+
+#6-12
+
+person:dict = {"nome":"Erik", "cognome":"Wilson", "età":20, "città":"Liverpool"}
+
+person["sesso"] = "maschio"
+
+print(person)
