@@ -1,4 +1,5 @@
 #esercizio 3C-00
+
 n:int=int(input("inserire il numero di neonati "))
 
 match n:

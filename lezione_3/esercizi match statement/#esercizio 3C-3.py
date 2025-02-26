@@ -1,4 +1,5 @@
 #esercizio 3C-3
+
 oggetti:list=[]
 
 while len(oggetti) < 3:

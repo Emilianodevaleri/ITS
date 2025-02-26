@@ -1,5 +1,7 @@
 #esercizio 3C-2
+
 voto:int=int(input("inserisci voto "))
+
 match voto:
     case voto if voto <=110 and voto>= 106:
         print("4.0")

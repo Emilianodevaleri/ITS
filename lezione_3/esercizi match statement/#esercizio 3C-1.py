@@ -1,5 +1,7 @@
 #esercizio 3C-1
+
 voto:int=int(input("inserire il voto "))
+
 match voto:
     case 10:
         print("Eccellente")
