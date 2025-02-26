@@ -215,6 +215,20 @@ for x in numbers1_9:
         
     else:
         print(f"{x}th")
+    
+    #metodo alternativo
+'''
+    if x == 1:
+        suffisso = "st"
+        
+    elif x == 2:
+        suffisso = "nd"    
+    elif x == 3:
+        suffisso = "rd"
+    else:
+        suffisso = "th"
+    
+    print(f"{x}{suffisso}") '''
 
 #6-1
 
