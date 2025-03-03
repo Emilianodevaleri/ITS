@@ -31,7 +31,7 @@ info:dict={"animale":animale, "categoria":animal_type, "abitat":abitat,}
 match info:
     case info if info["abitat"]=="terra" and info["animale"] in ["cane", "gatto", "cavallo", "elefante", "leone"]:
         print(f"{animale} è un mammifero terrestre")
-    case info if info["abitat"]=="terra" and info["animale"] in ["serpente, lucertola"]:
+    case info if info["abitat"]=="terra" and info["animale"] in ["serpente", "lucertola", "tartaruga"]:
         print(f"{animale} è un rettitle terrestre")
     case info if info["abitat"]=="terra" and info["animale"] in ["gallina", "tacchino"]:
         print(f"{animale} è un uccello terrestre")
