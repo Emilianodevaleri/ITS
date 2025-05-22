@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prodotti</title>
+</head>
+<body>
+  <h1>Lista Prodotti</h1>
+
+  <input type="text" id="nomeProdotto" placeholder="Scrivi un prodotto">
+  <button onclick="aggiungiProdotto()">Aggiungi</button>
+
+  <ul id="listaProdotti"></ul>
+
+  <script>
+    function aggiungiProdotto() {
+      var input = document.getElementById("nomeProdotto");
+      var nome = input.value;
+
+      if (nome !== "") {
+        var nuovoElemento = document.createElement("li");
+        nuovoElemento.textContent = nome;
+
+        var lista = document.getElementById("listaProdotti");
+        lista.appendChild(nuovoElemento);
+
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
