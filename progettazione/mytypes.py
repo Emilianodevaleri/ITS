@@ -106,3 +106,16 @@ class PartitaIVA(str):
         if not iva.isalnum() or len(iva) != 11:
             raise ValueError("Partita iva non valida")
         return super.__new__(cls, iva)
+    
+class RealGEZ(float):
+    # Tipo di dato Reale >= 0
+
+    def __new__(cls, v: int | float | str | bool | Self) -> Self:
+        # Invoco il metodo new della superclasse, che è 'float'
+        n: float = super().__new__(cls, v)
+
+        if n >= 0:
+            return n
+
+        raise ValueError(f"Il numero inserito {v} è negativo!")
+
