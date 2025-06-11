@@ -75,7 +75,7 @@ class Studenti:
     def set_codice_fiscale(self, cf: Cf) -> None:
         self._codice_fiscale: Cf = cf
     
-    def inscrizione(self) -> Facoltà:
+    def facoltà(self) -> Facoltà:
         return self.inscrizione
     
 
