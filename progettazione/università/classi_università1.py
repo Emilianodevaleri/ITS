@@ -1,4 +1,4 @@
-from types_università1 import Cf
+
 from types_università1 import *
 import datetime
 
