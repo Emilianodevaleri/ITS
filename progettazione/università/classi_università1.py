@@ -107,6 +107,9 @@ class Corso_superato:
     def voto(self) -> Voto:
         return self.voto
     
+    
+    
+    
 class Città:
     def __init__(self, nome: str):
         self.set_nome(nome)

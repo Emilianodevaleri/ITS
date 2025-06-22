@@ -1,6 +1,6 @@
 from types_voli_aerei import RealG19
 
-class volo:
+class compagnia:
     _nome:str
     _anno:RealG19
 
