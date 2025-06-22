@@ -1,12 +1,15 @@
 from mytypes import Telefono, Indirizzo
+from impiegato import Impiegato
 
 class Dipartimento:
 
     _nome: str # noto alla nascita
     _telefoni: set[Telefono] # [1..*] noto alla nascita
     _indirizzo: Indirizzo | None  # [0..1] possibilmente non noto alla nascita
+    _afferenza: set[Impiegato] 
+    _direzione: Impiegato
 
-    def __init__(self, nome: str, tel: Telefono, ind: Indirizzo|None) -> None:
+    def __init__(self, nome: str, tel: Telefono, indirizzo: Indirizzo|None, afferenza: None, direzione: Impiegato) -> None:
         self.set_nome(nome)
 
         # opzione 1
@@ -15,7 +18,9 @@ class Dipartimento:
         # opzione 2
         # self.set_telefoni({tel})
 
-        self.set_indirizzo(ind)
+        self.set_indirizzo(indirizzo)
+        self.set_afferenza(afferenza)
+        self.set_direzione(direzione)
 
     def nome(self) -> str:
         return self._nome
@@ -55,5 +60,14 @@ class Dipartimento:
         return f"Dipartimento '{self.nome()}' {ind_str} e numeri telefono: {self.telefoni()}"
 
 
-if __name__ == "__main__":
-    pass
+    def afferenza(self) -> frozenset[Impiegato]:
+        return self._afferenza
+    
+    def set_afferenza(self, a: set[Impiegato]) -> None:
+        self._afferenza: frozenset[Impiegato] = a
+
+    def direzione(self) -> Impiegato:
+        return self.direzione
+    
+    def set_direzione(self, d: Impiegato) -> None:
+        self.direzione: Impiegato = d
